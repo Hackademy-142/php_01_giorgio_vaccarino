@@ -18,30 +18,30 @@ foreach($array as $el){
 $users = [ ['name' => 'Pippo', 'surname' => 'Pluto', 'gender' => 'M'], ['name' => 'Pi', 'surname' => 'Puto', 'gender' => 'F'], ['name' => 'Ppp', 'surname' => 'P', 'gender' => 'N/D'] ];
 
 foreach($users as $user){
-    if($user["gender"] == "F"){
-        echo "Buongiorno Sig.ra {$user['name']} {$user['surname']}\n";
+    if($user['gender'] == "F"){
+        echo "Buongiorno Sig.ra $user[name] $user[surname]\n"; //string interpolation non necessitiamo delle virgolette nelle paremtesi quadre
     } elseif($user["gender"] == "M"){
-        echo "Buongiorno Sig. {$user['name']} {$user['surname']}\n";
+        echo "Buongiorno Sig. $user[name] $user[surname]\n";
     } else {
-        echo "Buongiorno {$user['name']} {$user['surname']}\n";
+        echo "Buongiorno $user[name] $user[surname]\n";
     };
 };
 
 //Scrivere un programma che stampi in console tutti i numeri da uno a cento. Se il numero è multiplo di 3 stampare “PHP” al posto del numero; se multiplo di 5 stampare “JAVASCRIPT”; se multiplo di 3 e 5 contemporaneamente deve stampare “HACKADEMY".
-for($i = 1; $i <= 100; $i++){
-    switch($i) {
-        case $i % 3 == 0 && $i % 5 == 0:
-            echo "HACKADEMY\n";
-            break;
-        case $i % 3 == 0:
-            echo "PHP\n";
-            break;
-        case $i % 5 == 0:
-            echo "JAVASCRIPT\n";
-            break;
-        default:
-            echo "$i\n";
-    };
-};
+// for($i = 1; $i <= 100; $i++){
+//     switch($i) {
+//         case $i % 3 == 0 && $i % 5 == 0:
+//             echo "HACKADEMY\n";
+//             break;
+//         case $i % 3 == 0:
+//             echo "PHP\n";
+//             break;
+//         case $i % 5 == 0:
+//             echo "JAVASCRIPT\n";
+//             break;
+//         default:
+//             echo "$i\n";
+//     };
+// };
 
 ?>
